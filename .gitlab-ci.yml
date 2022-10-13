@@ -1,0 +1,24 @@
+image: "rust:latest"
+
+stages:
+    - fmt
+    - test
+    - deploy
+
+
+deploy_script:
+    stage: deploy
+    script: 
+        - echo "I'm mock deploying something!"
+
+cargo_fmt:
+    stage: fmt
+    script:
+        - cargo fmt --all -- --check
+
+
+test:cargo:
+    stage: test  
+    script:
+        - rustc --version && cargo --version  # Print version info for debugging
+        - cargo test --workspace --verbose
