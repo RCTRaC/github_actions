@@ -1,10 +1,10 @@
 fn main() {
     println!("Hello, world!");
-    println!("{}", my_add(2,3));
+    println!("{}", my_add(2, 3));
 }
 
 fn my_add(a: i64, b: i64) -> i64 {
-    a+b
+    a + b
 }
 
 #[cfg(test)]
@@ -14,6 +14,6 @@ mod tests {
 
     #[test]
     fn test_add() {
-	assert_eq!(my_add(2, 3), 5);
+        assert_eq!(my_add(2, 3), 5);
     }
 }
