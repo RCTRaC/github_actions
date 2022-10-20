@@ -3,7 +3,7 @@ fn main() {
     println!("{}", my_add(2, 3));
 }
 
-fn my_add(a: i64, b: i64) -> i64 {
+fn my_add(a: i8, b: i8) -> i8 {
     a + b
 }
 
