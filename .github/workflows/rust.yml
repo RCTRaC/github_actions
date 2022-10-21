@@ -17,7 +17,8 @@ jobs:
     - name: Build
       run: cargo build --verbose
 
-  test: 
+  test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
